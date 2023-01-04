@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename= 'css/style.css')}}">
+</head>
+<body>
+    <h1>Customer Churn Prediction</h1>
+    <form action="{{url_for('predict')}}"  method="post">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+        <br>
+        <label for="income">Income</label>
+        <input type="number" name="income" id="income">
+        <br>
+        <label for="Tenure">Tenure</label>
+        <input type="number" name="Tenure" id="Tenure">
+        <br>
+        <label for="gender">Gender</label>
+        <input type="number" name="gender" id="gender">
+        <br>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    {{churn_text}}
+</body>
+</html>
